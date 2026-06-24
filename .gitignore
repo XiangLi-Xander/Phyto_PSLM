@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Model / data files (large, not tracked)
+*.pth
+*.pt
+*.npz
+esm2/
+
+# Outputs (generated at runtime)
+outputs/models/
+outputs/logs/
+outputs/predictions/
+outputs/figures/
+outputs/benchmarks/
+outputs/ablation/
+outputs/compare/
+outputs/rna_umap/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.venv/
+venv/
+.env
