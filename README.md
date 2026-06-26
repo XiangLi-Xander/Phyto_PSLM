@@ -33,24 +33,36 @@ pip install torch>=2.7.1 --index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
 ```
 
-### Pre-trained model weights
+### Model weights & large files
 
-Download the pre-trained model checkpoint (`best_model.pth`) and place it at:
-
-```
-outputs/models/best_model.pth
-```
-
-### ESM2 model weights
-
-Download the ESM2 model (`facebook/esm2_t33_650M_UR50D`) and place it in the `esm2/` directory:
+Some files are too large for GitHub and must be downloaded separately.  
+Use the automated download script:
 
 ```bash
-# Option A: Use huggingface_hub
+# Install requirements
+pip install huggingface_hub requests
+
+# Download all models (ESM2 + pre-trained checkpoint)
+python scripts/download_models.py
+```
+
+**What gets downloaded:**
+
+| File | Size | Source | Destination |
+|------|------|--------|-------------|
+| ESM2-t33-650M (`model.safetensors`) | ~2.5 GB | [HuggingFace: facebook/esm2_t33_650M_UR50D](https://huggingface.co/facebook/esm2_t33_650M_UR50D) | `esm2/` |
+| Pre-trained checkpoint (`best_model.pth`) | ~130 MB | [Releases page](https://github.com/XiangLi-Xander/Phyto_PSLM/releases) | `outputs/models/` |
+
+**Manual download:**
+
+```bash
+# ESM2 model
 pip install huggingface_hub
 huggingface-cli download facebook/esm2_t33_650M_UR50D --local-dir esm2
 
-# Option B: Manual download from https://huggingface.co/facebook/esm2_t33_650M_UR50D
+# Pre-trained checkpoint
+# Download from: https://github.com/XiangLi-Xander/Phyto_PSLM/releases
+# Save as: outputs/models/best_model.pth
 ```
 
 ### IUPred3
@@ -109,6 +121,8 @@ The training loop is step-based (10,000 steps by default), with evaluation every
 PhytoRNP_PSLM/
 ├── README.md
 ├── requirements.txt
+├── scripts/
+│   └── download_models.py  # Automated model weights downloader
 ├── data/
 │   ├── processed/          # {train,val,test}.csv
 │   ├── rna_dep/            # RNA-dependency dataset splits
@@ -122,11 +136,11 @@ PhytoRNP_PSLM/
 │   ├── train.py            # Training loop
 │   ├── predict.py          # Inference on CSV input
 │   └── predict_ara.py      # Inference on A. thaliana proteome
-├── esm2/                   # ESM2 model weights (user-provided)
+├── esm2/                   # ESM2 model weights (download via scripts/download_models.py)
 ├── iupred3/                # IUPred3 library (included)
 ├── RNA_src/                # RNA-dependency analysis source code
 ├── outputs/
-│   ├── models/best_model.pth
+│   ├── models/             # Pre-trained checkpoints (download separately)
 │   ├── logs/
 │   ├── predictions/
 │   └── figures/
