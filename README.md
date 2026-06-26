@@ -51,7 +51,27 @@ python scripts/download_models.py
 | File | Size | Source | Destination |
 |------|------|--------|-------------|
 | ESM2-t33-650M (`model.safetensors`) | ~2.5 GB | [HuggingFace: facebook/esm2_t33_650M_UR50D](https://huggingface.co/facebook/esm2_t33_650M_UR50D) | `esm2/` |
-| Pre-trained checkpoint (`best_model.pth`) | ~130 MB | [Releases page](https://github.com/XiangLi-Xander/Phyto_PSLM/releases) | `outputs/models/` |
+| ESM+IUPred benchmark features | ~422 MB | [HuggingFace Assets](https://huggingface.co/XiangLi-Xander/Phyto_PSLM_assets) | `outputs/benchmarks/` |
+| RF handcrafted benchmark model | ~126 MB | [HuggingFace Assets](https://huggingface.co/XiangLi-Xander/Phyto_PSLM_assets) | `outputs/benchmarks/` |
+
+> These 3 files exceed GitHub's file size limits and are hosted on HuggingFace.
+> Before running the downloader, upload your local copies to a HuggingFace repo,
+> then set `HF_REPO_ID` in `scripts/download_models.py`.
+
+**Upload your own copies to HuggingFace:**
+
+```bash
+# 1. Install
+pip install huggingface_hub
+huggingface-cli login
+
+# 2. Create a model repo (or use an existing one)
+#    https://huggingface.co/new
+
+# 3. Upload the 2 benchmark files
+huggingface-cli upload <your-username>/<your-repo> outputs/benchmarks/esm_iupred_features.npz esm_iupred_features.npz
+huggingface-cli upload <your-username>/<your-repo> outputs/benchmarks/llps_rf_handcrafted.pkl llps_rf_handcrafted.pkl
+```
 
 **Manual download:**
 
@@ -60,9 +80,9 @@ python scripts/download_models.py
 pip install huggingface_hub
 huggingface-cli download facebook/esm2_t33_650M_UR50D --local-dir esm2
 
-# Pre-trained checkpoint
-# Download from: https://github.com/XiangLi-Xander/Phyto_PSLM/releases
-# Save as: outputs/models/best_model.pth
+# Benchmark assets (after uploading to your own HF repo)
+huggingface-cli download XiangLi-Xander/Phyto_PSLM_assets esm_iupred_features.npz --local-dir outputs/benchmarks
+huggingface-cli download XiangLi-Xander/Phyto_PSLM_assets llps_rf_handcrafted.pkl --local-dir outputs/benchmarks
 ```
 
 ### IUPred3
