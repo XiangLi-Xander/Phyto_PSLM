@@ -1,0 +1,29 @@
+2026-06-06 11:35:48.333037: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[1] Loading RNA-labeled data...
+  Animal: 722
+  Plant:  4793
+  Total:  5515
+
+[2] Loading model...
+[3] Predicting...
+  32/5515
+  1632/5515
+  3232/5515
+  4832/5515
+
+============================================================
+Saved: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/outputs/rna_dependent_predictions.xlsx
+Total proteins: 5515
+  Predicted LLPS (score>=0.5): 1719
+  Predicted Non-LLPS:          3796
+
+By RNA dependency:
+  RNA-dependent=Yes: 2420 proteins, 863 predicted LLPS (35.7%)
+  RNA-dependent=No: 3095 proteins, 856 predicted LLPS (27.7%)
+
+By species:
+  Animal: 722 proteins, mean LLPS_Score=0.4468
+  Zea mays: 4793 proteins, mean LLPS_Score=0.2978

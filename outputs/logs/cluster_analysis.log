@@ -1,0 +1,12 @@
+2026-06-04 06:21:44.968795: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device: cuda  |  K-Means k = 8
+
+[1] Loading data...
+  Positive (LLPS): 6374 (original: 6559)
+  Negative (background): 146867 (original: 148614)
+
+[2] Extracting ESM2 CLS embeddings (fp16, max_len=512)...
+  ESM2 Neg: 256/146867

@@ -1,0 +1,7 @@
+模型,特征,任务,Test_Acc,Test_Precision,Test_Recall,Test_F1,Test_AUC,Test_AUPR
+DL_LLPS,ESM2+IUPred3_per-residue,LLPS预测(processed),-,-,-,0.6151,0.9472,0.6157
+DL_RNA-dep,ESM2+IUPred3_per-residue,RNA依赖性(rna_dep),0.5869,0.5441,0.8616,0.6670,-,-
+RF_原,传统手工特征(1402维),RNA依赖性(rna_dep),0.7306,0.7462,0.6650,0.7033,0.7995,0.7870
+XGBoost_原,传统手工特征(1402维),RNA依赖性(rna_dep),0.7246,0.7186,0.7009,0.7096,0.7950,0.7825
+RF_新,ESM2_mean-pool+IUPred3(1289维),RNA依赖性(rna_dep),0.7424,0.7490,0.6972,0.7222,0.7995,0.7855
+XGBoost_新,ESM2_mean-pool+IUPred3(1289维),RNA依赖性(rna_dep),0.7501,0.7449,0.7293,0.7370,0.8104,0.7889

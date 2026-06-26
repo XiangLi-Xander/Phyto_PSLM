@@ -1,0 +1,61 @@
+============================================================
+Hybrid Deep MLP Classifier (PhytoRNP pool + RNA motif)
+============================================================
+[1] Loading data...
+  Train: 2449  Val: 526  Test: 526
+
+[2] Extracting 512-dim pooled vectors...
+2026-06-09 15:24:41.949063: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Extracting:   0%|          | 0/110 [00:00<?, ?it/s]Extracting:   1%|          | 1/110 [00:11<21:44, 11.97s/it]Extracting:   2%|▏         | 2/110 [00:23<20:57, 11.65s/it]Extracting:   3%|▎         | 3/110 [00:35<20:48, 11.67s/it]Extracting:   4%|▎         | 4/110 [00:47<20:50, 11.80s/it]Extracting:   5%|▍         | 5/110 [00:59<20:50, 11.91s/it]Extracting:   5%|▌         | 6/110 [01:10<20:28, 11.81s/it]Extracting:   6%|▋         | 7/110 [01:22<20:24, 11.89s/it]Extracting:   7%|▋         | 8/110 [01:33<19:42, 11.60s/it]Extracting:   8%|▊         | 9/110 [01:45<19:45, 11.74s/it]Extracting:   9%|▉         | 10/110 [01:58<19:47, 11.88s/it]Extracting:  10%|█         | 11/110 [02:06<17:38, 10.70s/it]Extracting:  11%|█         | 12/110 [02:18<18:15, 11.17s/it]Extracting:  12%|█▏        | 13/110 [02:30<18:26, 11.41s/it]Extracting:  13%|█▎        | 14/110 [02:42<18:27, 11.54s/it]Extracting:  14%|█▎        | 15/110 [02:54<18:31, 11.71s/it]Extracting:  15%|█▍        | 16/110 [03:04<17:40, 11.28s/it]Extracting:  15%|█▌        | 17/110 [03:16<17:50, 11.51s/it]Extracting:  16%|█▋        | 18/110 [03:28<17:42, 11.55s/it]Extracting:  17%|█▋        | 19/110 [03:40<17:42, 11.68s/it]Extracting:  18%|█▊        | 20/110 [03:52<17:36, 11.74s/it]Extracting:  19%|█▉        | 21/110 [04:02<16:53, 11.39s/it]Extracting:  20%|██        | 22/110 [04:14<16:51, 11.50s/it]Extracting:  21%|██        | 23/110 [04:26<16:48, 11.60s/it]Extracting:  22%|██▏       | 24/110 [04:38<16:43, 11.67s/it]Extracting:  23%|██▎       | 25/110 [04:50<16:39, 11.75s/it]Extracting:  24%|██▎       | 26/110 [05:01<16:30, 11.79s/it]Extracting:  25%|██▍       | 27/110 [05:13<16:23, 11.85s/it]Extracting:  25%|██▌       | 28/110 [05:25<16:09, 11.82s/it]Extracting:  26%|██▋       | 29/110 [05:37<15:54, 11.79s/it]Extracting:  27%|██▋       | 30/110 [05:48<15:17, 11.47s/it]Extracting:  28%|██▊       | 31/110 [06:00<15:17, 11.62s/it]Extracting:  29%|██▉       | 32/110 [06:11<15:11, 11.68s/it]Extracting:  30%|███       | 33/110 [06:23<15:09, 11.81s/it]Extracting:  31%|███       | 34/110 [06:35<15:00, 11.85s/it]Extracting:  32%|███▏      | 35/110 [06:47<14:36, 11.68s/it]Extracting:  33%|███▎      | 36/110 [06:59<14:30, 11.76s/it]Extracting:  34%|███▎      | 37/110 [07:11<14:36, 12.01s/it]Extracting:  35%|███▍      | 38/110 [07:24<14:30, 12.10s/it]Extracting:  35%|███▌      | 39/110 [07:36<14:17, 12.07s/it]Extracting:  36%|███▋      | 40/110 [07:48<14:05, 12.08s/it]Extracting:  37%|███▋      | 41/110 [08:00<13:57, 12.13s/it]Extracting:  38%|███▊      | 42/110 [08:12<13:50, 12.22s/it]Extracting:  39%|███▉      | 43/110 [08:25<13:41, 12.26s/it]Extracting:  40%|████      | 44/110 [08:37<13:23, 12.18s/it]Extracting:  41%|████      | 45/110 [08:48<13:04, 12.07s/it]Extracting:  42%|████▏     | 46/110 [09:00<12:49, 12.03s/it]Extracting:  43%|████▎     | 47/110 [09:12<12:36, 12.00s/it]Extracting:  44%|████▎     | 48/110 [09:25<12:27, 12.06s/it]Extracting:  45%|████▍     | 49/110 [09:37<12:18, 12.11s/it]Extracting:  45%|████▌     | 50/110 [09:49<12:07, 12.12s/it]Extracting:  46%|████▋     | 51/110 [10:01<11:52, 12.08s/it]Extracting:  47%|████▋     | 52/110 [10:12<11:22, 11.77s/it]Extracting:  48%|████▊     | 53/110 [10:24<11:17, 11.88s/it]Extracting:  49%|████▉     | 54/110 [10:36<11:02, 11.84s/it]Extracting:  50%|█████     | 55/110 [10:48<10:49, 11.81s/it]Extracting:  51%|█████     | 56/110 [10:59<10:25, 11.59s/it]Extracting:  52%|█████▏    | 57/110 [11:11<10:28, 11.86s/it]Extracting:  53%|█████▎    | 58/110 [11:23<10:15, 11.84s/it]Extracting:  54%|█████▎    | 59/110 [11:35<10:08, 11.94s/it]Extracting:  55%|█████▍    | 60/110 [11:48<10:04, 12.09s/it]Extracting:  55%|█████▌    | 61/110 [11:56<09:02, 11.07s/it]Extracting:  56%|█████▋    | 62/110 [12:08<09:07, 11.40s/it]Extracting:  57%|█████▋    | 63/110 [12:20<09:00, 11.50s/it]Extracting:  58%|█████▊    | 64/110 [12:32<08:55, 11.65s/it]Extracting:  59%|█████▉    | 65/110 [12:44<08:40, 11.57s/it]Extracting:  60%|██████    | 66/110 [12:56<08:36, 11.73s/it]Extracting:  61%|██████    | 67/110 [13:08<08:29, 11.86s/it]Extracting:  62%|██████▏   | 68/110 [13:19<08:04, 11.53s/it]Extracting:  63%|██████▎   | 69/110 [13:31<08:00, 11.73s/it]Extracting:  64%|██████▎   | 70/110 [13:43<07:51, 11.79s/it]Extracting:  65%|██████▍   | 71/110 [13:55<07:44, 11.90s/it]Extracting:  65%|██████▌   | 72/110 [14:07<07:33, 11.95s/it]Extracting:  66%|██████▋   | 73/110 [14:18<07:15, 11.78s/it]Extracting:  67%|██████▋   | 74/110 [14:29<06:55, 11.55s/it]Extracting:  68%|██████▊   | 75/110 [14:41<06:50, 11.72s/it]Extracting:  69%|██████▉   | 76/110 [14:53<06:38, 11.72s/it]Extracting:  70%|███████   | 77/110 [15:05<06:29, 11.80s/it]Extracting:  71%|███████   | 78/110 [15:17<06:20, 11.89s/it]Extracting:  72%|███████▏  | 79/110 [15:29<06:11, 11.97s/it]Extracting:  73%|███████▎  | 80/110 [15:42<06:00, 12.03s/it]Extracting:  74%|███████▎  | 81/110 [15:52<05:38, 11.69s/it]Extracting:  75%|███████▍  | 82/110 [16:05<05:30, 11.81s/it]Extracting:  75%|███████▌  | 83/110 [16:16<05:14, 11.66s/it]Extracting:  76%|███████▋  | 84/110 [16:27<05:02, 11.62s/it]Extracting:  77%|███████▋  | 85/110 [16:39<04:53, 11.74s/it]Extracting:  78%|███████▊  | 86/110 [16:51<04:40, 11.70s/it]Extracting:  79%|███████▉  | 87/110 [17:03<04:28, 11.69s/it]Extracting:  80%|████████  | 88/110 [17:14<04:17, 11.71s/it]Extracting:  81%|████████  | 89/110 [17:27<04:13, 12.05s/it]Extracting:  82%|████████▏ | 90/110 [17:39<04:01, 12.07s/it]Extracting:  83%|████████▎ | 91/110 [17:52<03:50, 12.12s/it]Extracting:  84%|████████▎ | 92/110 [18:04<03:38, 12.16s/it]Extracting:  85%|████████▍ | 93/110 [18:14<03:16, 11.58s/it]Extracting:  85%|████████▌ | 94/110 [18:19<02:34,  9.63s/it]Extracting:  86%|████████▋ | 95/110 [18:28<02:22,  9.50s/it]Extracting:  87%|████████▋ | 96/110 [18:40<02:23, 10.24s/it]Extracting:  88%|████████▊ | 97/110 [18:52<02:20, 10.78s/it]Extracting:  89%|████████▉ | 98/110 [19:05<02:14, 11.19s/it]Extracting:  90%|█████████ | 99/110 [19:17<02:07, 11.56s/it]Extracting:  91%|█████████ | 100/110 [19:29<01:57, 11.71s/it]Extracting:  92%|█████████▏| 101/110 [19:41<01:45, 11.73s/it]Extracting:  93%|█████████▎| 102/110 [19:53<01:34, 11.82s/it]Extracting:  94%|█████████▎| 103/110 [20:04<01:21, 11.68s/it]Extracting:  95%|█████████▍| 104/110 [20:17<01:11, 11.89s/it]Extracting:  95%|█████████▌| 105/110 [20:29<00:59, 11.99s/it]Extracting:  96%|█████████▋| 106/110 [20:41<00:48, 12.13s/it]Extracting:  97%|█████████▋| 107/110 [20:52<00:35, 11.77s/it]Extracting:  98%|█████████▊| 108/110 [21:04<00:23, 11.91s/it]Extracting:  99%|█████████▉| 109/110 [21:17<00:12, 12.03s/it]Extracting: 100%|██████████| 110/110 [21:21<00:00,  9.83s/it]Extracting: 100%|██████████| 110/110 [21:21<00:00, 11.65s/it]
+  Done: (3501, 512)  (1282s)
+
+[3] Computing RNA motif features...
+  Motif features: (3501, 8)
+  Combined: 520 dims
+
+[4] MLP: 175,489 params
+
+[5] Training MLP...
+  Epoch   0 | Loss:0.6706 | Val Acc:0.5722 F1:0.5961 AUC:0.6181
+  Epoch  10 | Loss:0.5714 | Val Acc:0.6179 F1:0.5523 AUC:0.7086
+  Epoch  20 | Loss:0.5396 | Val Acc:0.6464 F1:0.6125 AUC:0.7275
+  Epoch  30 | Loss:0.5090 | Val Acc:0.6711 F1:0.6448 AUC:0.7406
+  Epoch  40 | Loss:0.4944 | Val Acc:0.6806 F1:0.6471 AUC:0.7478
+  Epoch  50 | Loss:0.4655 | Val Acc:0.6958 F1:0.6624 AUC:0.7520
+  Epoch  60 | Loss:0.4414 | Val Acc:0.6939 F1:0.6680 AUC:0.7643
+  Epoch  70 | Loss:0.4223 | Val Acc:0.6977 F1:0.6876 AUC:0.7603
+  Epoch  80 | Loss:0.3857 | Val Acc:0.7072 F1:0.7027 AUC:0.7701
+  Epoch  90 | Loss:0.3629 | Val Acc:0.6882 F1:0.6598 AUC:0.7491
+  Epoch 100 | Loss:0.3395 | Val Acc:0.7148 F1:0.6964 AUC:0.7652
+  Epoch 110 | Loss:0.3192 | Val Acc:0.7091 F1:0.6897 AUC:0.7711
+  Epoch 120 | Loss:0.2893 | Val Acc:0.7110 F1:0.6923 AUC:0.7785
+  Epoch 130 | Loss:0.2883 | Val Acc:0.7186 F1:0.7063 AUC:0.7702
+  Epoch 140 | Loss:0.2505 | Val Acc:0.7110 F1:0.6898 AUC:0.7728
+  Epoch 150 | Loss:0.2398 | Val Acc:0.7129 F1:0.7010 AUC:0.7762
+  Epoch 160 | Loss:0.2357 | Val Acc:0.7186 F1:0.7016 AUC:0.7783
+  Epoch 170 | Loss:0.2287 | Val Acc:0.7091 F1:0.6982 AUC:0.7757
+  Epoch 180 | Loss:0.2218 | Val Acc:0.7205 F1:0.7078 AUC:0.7750
+  Epoch 190 | Loss:0.2299 | Val Acc:0.7110 F1:0.7020 AUC:0.7761
+  Epoch 199 | Loss:0.2287 | Val Acc:0.7072 F1:0.6957 AUC:0.7754
+
+============================================================
+ Test Results
+============================================================
+  Acc:0.7110  F1:0.7054  AUC:0.7708  AUPR:0.7620
+
+[[192  73]
+ [ 79 182]]
+              precision    recall  f1-score   support
+
+         0.0     0.7085    0.7245    0.7164       265
+         1.0     0.7137    0.6973    0.7054       261
+
+    accuracy                         0.7110       526
+   macro avg     0.7111    0.7109    0.7109       526
+weighted avg     0.7111    0.7110    0.7110       526
+
+
+Saved: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/outputs/models/best_rna_dep_model.pth

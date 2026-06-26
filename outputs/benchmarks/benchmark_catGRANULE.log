@@ -1,0 +1,42 @@
+Device: cuda:0
+
+[1/5] Loading catGRANULE2.0 test set...
+  Test set: 2798 proteins (1422 pos, 1376 neg)
+
+[2/5] Fetching sequences from UniProt...
+Cache hit: 2791, missing: 7
+Fetching sequences:   0%|          | 0/1 [00:00<?, ?it/s]Fetching sequences: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]Fetching sequences: 100%|██████████| 1/1 [00:01<00:00,  1.67s/it]
+  Found: 2791, Not found in UniProt: 7, Empty seq: 0
+  Valid (len>=10): 2791
+
+[3/5] Loading PhytoRNP model...
+2026-06-05 10:30:09.868801: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  Model loaded.
+
+[4/5] Running PhytoRNP prediction (batch_size=32)...
+  Resuming from checkpoint: 5 batches done, 160 proteins predicted
+Predicting:   6%|▌         | 5/88 [00:00<?, ?it/s]Predicting:   7%|▋         | 6/88 [00:25<34:48, 25.47s/it]Predicting:   8%|▊         | 7/88 [00:47<31:39, 23.46s/it]Predicting:   9%|▉         | 8/88 [01:11<31:19, 23.49s/it]Predicting:  10%|█         | 9/88 [01:35<31:39, 24.04s/it]Predicting:  11%|█▏        | 10/88 [01:57<30:05, 23.15s/it]Predicting:  12%|█▎        | 11/88 [02:22<30:38, 23.88s/it]Predicting:  14%|█▎        | 12/88 [02:47<30:46, 24.30s/it]Predicting:  15%|█▍        | 13/88 [03:12<30:33, 24.44s/it]Predicting:  16%|█▌        | 14/88 [03:37<30:27, 24.70s/it]Predicting:  17%|█▋        | 15/88 [04:03<30:18, 24.91s/it]Predicting:  18%|█▊        | 16/88 [04:24<28:38, 23.86s/it]Predicting:  19%|█▉        | 17/88 [04:49<28:28, 24.07s/it]Predicting:  20%|██        | 18/88 [05:08<26:24, 22.64s/it]Predicting:  22%|██▏       | 19/88 [05:29<25:30, 22.19s/it]Predicting:  23%|██▎       | 20/88 [05:53<25:37, 22.61s/it]Predicting:  24%|██▍       | 21/88 [06:17<25:46, 23.09s/it]Predicting:  25%|██▌       | 22/88 [06:41<25:36, 23.28s/it]Predicting:  26%|██▌       | 23/88 [07:02<24:35, 22.69s/it]Predicting:  27%|██▋       | 24/88 [07:26<24:38, 23.10s/it]Predicting:  28%|██▊       | 25/88 [07:50<24:25, 23.27s/it]Predicting:  30%|██▉       | 26/88 [08:13<24:06, 23.33s/it]Predicting:  31%|███       | 27/88 [08:38<24:04, 23.68s/it]Predicting:  32%|███▏      | 28/88 [08:57<22:25, 22.42s/it]Predicting:  33%|███▎      | 29/88 [09:22<22:35, 22.98s/it]Predicting:  34%|███▍      | 30/88 [09:46<22:42, 23.49s/it]Predicting:  35%|███▌      | 31/88 [10:11<22:39, 23.86s/it]Predicting:  36%|███▋      | 32/88 [10:37<22:56, 24.59s/it]Predicting:  38%|███▊      | 33/88 [10:57<21:17, 23.23s/it]Predicting:  39%|███▊      | 34/88 [11:22<21:18, 23.68s/it]Predicting:  40%|███▉      | 35/88 [11:43<20:02, 22.70s/it]Predicting:  41%|████      | 36/88 [12:03<19:03, 21.99s/it]Predicting:  42%|████▏     | 37/88 [12:23<18:13, 21.45s/it]Predicting:  43%|████▎     | 38/88 [12:44<17:49, 21.39s/it]Predicting:  44%|████▍     | 39/88 [13:06<17:29, 21.43s/it]Predicting:  45%|████▌     | 40/88 [13:29<17:32, 21.92s/it]Predicting:  47%|████▋     | 41/88 [13:52<17:32, 22.39s/it]Predicting:  48%|████▊     | 42/88 [14:14<17:01, 22.20s/it]Predicting:  49%|████▉     | 43/88 [14:37<16:42, 22.29s/it]Predicting:  50%|█████     | 44/88 [14:59<16:27, 22.44s/it]Predicting:  51%|█████     | 45/88 [15:21<15:49, 22.08s/it]Predicting:  52%|█████▏    | 46/88 [15:42<15:18, 21.87s/it]Predicting:  53%|█████▎    | 47/88 [16:06<15:19, 22.43s/it]Predicting:  55%|█████▍    | 48/88 [16:29<15:08, 22.71s/it]Predicting:  56%|█████▌    | 49/88 [16:51<14:37, 22.50s/it]Predicting:  57%|█████▋    | 50/88 [17:15<14:30, 22.92s/it]Predicting:  58%|█████▊    | 51/88 [17:38<14:12, 23.03s/it]Predicting:  59%|█████▉    | 52/88 [18:02<13:52, 23.14s/it]Predicting:  60%|██████    | 53/88 [18:22<12:58, 22.25s/it]Predicting:  61%|██████▏   | 54/88 [18:46<12:59, 22.92s/it]Predicting:  62%|██████▎   | 55/88 [19:11<12:49, 23.33s/it]Predicting:  64%|██████▎   | 56/88 [19:30<11:44, 22.01s/it]Predicting:  65%|██████▍   | 57/88 [19:54<11:44, 22.71s/it]Predicting:  66%|██████▌   | 58/88 [20:17<11:19, 22.66s/it]Predicting:  67%|██████▋   | 59/88 [20:41<11:15, 23.29s/it]Predicting:  68%|██████▊   | 60/88 [21:08<11:17, 24.20s/it]Predicting:  69%|██████▉   | 61/88 [21:31<10:49, 24.06s/it]Predicting:  70%|███████   | 62/88 [21:56<10:29, 24.23s/it]Predicting:  72%|███████▏  | 63/88 [22:21<10:15, 24.62s/it]Predicting:  73%|███████▎  | 64/88 [22:47<09:57, 24.90s/it]Predicting:  74%|███████▍  | 65/88 [23:09<09:10, 23.93s/it]Predicting:  75%|███████▌  | 66/88 [23:36<09:06, 24.84s/it]Predicting:  76%|███████▌  | 67/88 [24:02<08:51, 25.30s/it]Predicting:  77%|███████▋  | 68/88 [24:26<08:18, 24.91s/it]Predicting:  78%|███████▊  | 69/88 [24:52<07:58, 25.17s/it]Predicting:  80%|███████▉  | 70/88 [25:16<07:29, 24.99s/it]Predicting:  81%|████████  | 71/88 [25:40<06:57, 24.56s/it]Predicting:  82%|████████▏ | 72/88 [26:03<06:27, 24.24s/it]Predicting:  83%|████████▎ | 73/88 [26:29<06:07, 24.50s/it]Predicting:  84%|████████▍ | 74/88 [26:50<05:28, 23.48s/it]Predicting:  85%|████████▌ | 75/88 [27:16<05:15, 24.25s/it]Predicting:  86%|████████▋ | 76/88 [27:32<04:24, 22.01s/it]Predicting:  88%|████████▊ | 77/88 [27:58<04:12, 22.96s/it]Predicting:  89%|████████▊ | 78/88 [28:19<03:45, 22.52s/it]Predicting:  90%|████████▉ | 79/88 [28:42<03:24, 22.77s/it]Predicting:  91%|█████████ | 80/88 [29:07<03:05, 23.14s/it]Predicting:  92%|█████████▏| 81/88 [29:33<02:49, 24.18s/it]Predicting:  93%|█████████▎| 82/88 [29:57<02:24, 24.00s/it]Predicting:  94%|█████████▍| 83/88 [30:20<01:59, 23.90s/it]Predicting:  95%|█████████▌| 84/88 [30:46<01:37, 24.34s/it]Predicting:  97%|█████████▋| 85/88 [31:13<01:15, 25.22s/it]Predicting:  98%|█████████▊| 86/88 [31:37<00:49, 24.86s/it]Predicting:  99%|█████████▉| 87/88 [32:00<00:24, 24.41s/it]Predicting: 100%|██████████| 88/88 [32:06<00:00, 18.72s/it]Predicting: 100%|██████████| 88/88 [32:06<00:00, 23.21s/it]
+
+[5/5] Computing metrics...
+  Valid predictions: 2791 / 2791 (0 NaN skipped)
+
+==========================================================================================
+PhytoRNP vs catGRANULE2.0 on catGRANULE2.0 test set (n=2791)
+Pos: 1421, Neg: 1370
+==========================================================================================
+Model                             AUC     AUPR      Acc     Prec      Rec       F1      MCC
+------------------------------------------------------------------------------------------
+catGRANULE v1                  0.6605   0.6132   0.6080   0.6266   0.5675   0.5956   0.2181
+catG2 RF (physchem)            0.7349   0.7193   0.6640   0.7002   0.5928   0.6420   0.3337
+catG2 MLP (physchem)           0.7363   0.7081   0.6665   0.7158   0.5703   0.6348   0.3425
+catG2 MLP (all feat)           0.7646   0.7375   0.6883   0.7371   0.6013   0.6623   0.3852
+PICNIC                         0.7346   0.7210   0.6609   0.7380   0.5169   0.6079   0.3413
+PICNICGO                       0.7547   0.7788   0.6373   0.8091   0.4212   0.5540   0.3415
+------------------------------------------------------------------------------------------
+PhytoRNP (我们的)                 0.7237   0.6924   0.5389   0.7724   0.1337   0.2280   0.1637
+==========================================================================================
+
+Full predictions saved to: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/outputs/benchmarks/catGRANULE_testset_phytoRNP_predictions.csv

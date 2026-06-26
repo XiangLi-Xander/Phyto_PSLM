@@ -1,0 +1,67 @@
+[1] Loading data...
+  Train: 2449  Val: 526  Test: 526
+
+[2] Loading frozen PhytoRNP backbone...
+2026-06-09 14:43:28.401258: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[3] Extracting 512-dim pooled vectors (3501 sequences)...
+Extracting:   0%|          | 0/110 [00:00<?, ?it/s]Extracting:   1%|          | 1/110 [00:13<24:02, 13.24s/it]Extracting:   2%|▏         | 2/110 [00:25<23:19, 12.96s/it]Extracting:   3%|▎         | 3/110 [00:38<22:24, 12.57s/it]Extracting:   4%|▎         | 4/110 [00:50<21:49, 12.36s/it]Extracting:   5%|▍         | 5/110 [01:02<21:26, 12.26s/it]Extracting:   5%|▌         | 6/110 [01:14<21:08, 12.19s/it]Extracting:   6%|▋         | 7/110 [01:26<20:45, 12.09s/it]Extracting:   7%|▋         | 8/110 [01:32<17:11, 10.11s/it]Extracting:   8%|▊         | 9/110 [01:38<14:52,  8.84s/it]Extracting:   9%|▉         | 10/110 [01:50<16:19,  9.80s/it]Extracting:  10%|█         | 11/110 [01:58<15:26,  9.36s/it]Extracting:  11%|█         | 12/110 [02:10<16:38, 10.19s/it]Extracting:  12%|█▏        | 13/110 [02:22<17:29, 10.82s/it]Extracting:  13%|█▎        | 14/110 [02:34<17:47, 11.12s/it]Extracting:  14%|█▎        | 15/110 [02:46<17:55, 11.32s/it]Extracting:  15%|█▍        | 16/110 [02:56<17:12, 10.99s/it]Extracting:  15%|█▌        | 17/110 [03:08<17:37, 11.37s/it]Extracting:  16%|█▋        | 18/110 [03:20<17:40, 11.53s/it]Extracting:  17%|█▋        | 19/110 [03:32<17:37, 11.62s/it]Extracting:  18%|█▊        | 20/110 [03:44<17:36, 11.73s/it]Extracting:  19%|█▉        | 21/110 [03:54<16:41, 11.26s/it]Extracting:  20%|██        | 22/110 [04:06<16:51, 11.49s/it]Extracting:  21%|██        | 23/110 [04:19<17:03, 11.77s/it]Extracting:  22%|██▏       | 24/110 [04:31<17:11, 11.99s/it]Extracting:  23%|██▎       | 25/110 [04:43<17:04, 12.05s/it]Extracting:  24%|██▎       | 26/110 [04:55<16:54, 12.08s/it]Extracting:  25%|██▍       | 27/110 [05:07<16:40, 12.05s/it]Extracting:  25%|██▌       | 28/110 [05:20<16:28, 12.05s/it]Extracting:  26%|██▋       | 29/110 [05:32<16:14, 12.04s/it]Extracting:  27%|██▋       | 30/110 [05:42<15:26, 11.59s/it]Extracting:  28%|██▊       | 31/110 [05:54<15:30, 11.78s/it]Extracting:  29%|██▉       | 32/110 [06:06<15:25, 11.87s/it]Extracting:  30%|███       | 33/110 [06:18<15:17, 11.91s/it]Extracting:  31%|███       | 34/110 [06:31<15:12, 12.00s/it]Extracting:  32%|███▏      | 35/110 [06:43<15:08, 12.11s/it]Extracting:  33%|███▎      | 36/110 [06:55<14:53, 12.07s/it]Extracting:  34%|███▎      | 37/110 [07:07<14:40, 12.06s/it]Extracting:  35%|███▍      | 38/110 [07:19<14:38, 12.20s/it]Extracting:  35%|███▌      | 39/110 [07:32<14:22, 12.15s/it]Extracting:  36%|███▋      | 40/110 [07:43<14:06, 12.10s/it]Extracting:  37%|███▋      | 41/110 [07:56<13:54, 12.09s/it]Extracting:  38%|███▊      | 42/110 [08:08<13:45, 12.14s/it]Extracting:  39%|███▉      | 43/110 [08:20<13:35, 12.18s/it]Extracting:  40%|████      | 44/110 [08:32<13:19, 12.11s/it]Extracting:  41%|████      | 45/110 [08:44<13:06, 12.10s/it]Extracting:  42%|████▏     | 46/110 [08:56<12:55, 12.12s/it]Extracting:  43%|████▎     | 47/110 [09:08<12:42, 12.10s/it]Extracting:  44%|████▎     | 48/110 [09:20<12:28, 12.07s/it]Extracting:  45%|████▍     | 49/110 [09:33<12:18, 12.11s/it]Extracting:  45%|████▌     | 50/110 [09:44<12:03, 12.06s/it]Extracting:  46%|████▋     | 51/110 [09:57<11:50, 12.05s/it]Extracting:  47%|████▋     | 52/110 [10:08<11:23, 11.78s/it]Extracting:  48%|████▊     | 53/110 [10:20<11:21, 11.95s/it]Extracting:  49%|████▉     | 54/110 [10:32<11:11, 11.99s/it]Extracting:  50%|█████     | 55/110 [10:44<11:01, 12.02s/it]Extracting:  51%|█████     | 56/110 [10:56<10:39, 11.84s/it]Extracting:  52%|█████▏    | 57/110 [11:08<10:34, 11.98s/it]Extracting:  53%|█████▎    | 58/110 [11:20<10:29, 12.11s/it]Extracting:  54%|█████▎    | 59/110 [11:33<10:21, 12.19s/it]Extracting:  55%|█████▍    | 60/110 [11:45<10:07, 12.15s/it]Extracting:  55%|█████▌    | 61/110 [11:54<09:07, 11.17s/it]Extracting:  56%|█████▋    | 62/110 [12:06<09:07, 11.41s/it]Extracting:  57%|█████▋    | 63/110 [12:18<09:03, 11.57s/it]Extracting:  58%|█████▊    | 64/110 [12:30<08:57, 11.69s/it]Extracting:  59%|█████▉    | 65/110 [12:41<08:48, 11.75s/it]Extracting:  60%|██████    | 66/110 [12:54<08:44, 11.93s/it]Extracting:  61%|██████    | 67/110 [13:06<08:35, 11.99s/it]Extracting:  62%|██████▏   | 68/110 [13:17<08:12, 11.73s/it]Extracting:  63%|██████▎   | 69/110 [13:29<08:00, 11.73s/it]Extracting:  64%|██████▎   | 70/110 [13:41<07:56, 11.92s/it]Extracting:  65%|██████▍   | 71/110 [13:53<07:46, 11.96s/it]Extracting:  65%|██████▌   | 72/110 [14:05<07:36, 12.02s/it]Extracting:  66%|██████▋   | 73/110 [14:17<07:16, 11.80s/it]Extracting:  67%|██████▋   | 74/110 [14:28<06:56, 11.56s/it]Extracting:  68%|██████▊   | 75/110 [14:40<06:52, 11.79s/it]Extracting:  69%|██████▉   | 76/110 [14:52<06:45, 11.91s/it]Extracting:  70%|███████   | 77/110 [15:04<06:35, 11.97s/it]Extracting:  71%|███████   | 78/110 [15:16<06:24, 12.01s/it]Extracting:  72%|███████▏  | 79/110 [15:28<06:11, 11.98s/it]Extracting:  73%|███████▎  | 80/110 [15:40<05:59, 11.99s/it]Extracting:  74%|███████▎  | 81/110 [15:51<05:34, 11.53s/it]Extracting:  75%|███████▍  | 82/110 [16:03<05:28, 11.75s/it]Extracting:  75%|███████▌  | 83/110 [16:14<05:12, 11.57s/it]Extracting:  76%|███████▋  | 84/110 [16:25<04:54, 11.31s/it]Extracting:  77%|███████▋  | 85/110 [16:37<04:46, 11.46s/it]Extracting:  78%|███████▊  | 86/110 [16:48<04:34, 11.44s/it]Extracting:  79%|███████▉  | 87/110 [17:00<04:26, 11.59s/it]Extracting:  80%|████████  | 88/110 [17:12<04:17, 11.71s/it]Extracting:  81%|████████  | 89/110 [17:24<04:08, 11.83s/it]Extracting:  82%|████████▏ | 90/110 [17:36<03:58, 11.94s/it]Extracting:  83%|████████▎ | 91/110 [17:49<03:49, 12.07s/it]Extracting:  84%|████████▎ | 92/110 [18:00<03:36, 12.01s/it]Extracting:  85%|████████▍ | 93/110 [18:13<03:26, 12.13s/it]Extracting:  85%|████████▌ | 94/110 [18:25<03:12, 12.04s/it]Extracting:  86%|████████▋ | 95/110 [18:37<03:00, 12.01s/it]Extracting:  87%|████████▋ | 96/110 [18:49<02:48, 12.04s/it]Extracting:  88%|████████▊ | 97/110 [19:01<02:36, 12.04s/it]Extracting:  89%|████████▉ | 98/110 [19:13<02:24, 12.05s/it]Extracting:  90%|█████████ | 99/110 [19:25<02:13, 12.13s/it]Extracting:  91%|█████████ | 100/110 [19:37<02:01, 12.15s/it]Extracting:  92%|█████████▏| 101/110 [19:49<01:49, 12.12s/it]Extracting:  93%|█████████▎| 102/110 [20:02<01:36, 12.10s/it]Extracting:  94%|█████████▎| 103/110 [20:10<01:16, 10.90s/it]Extracting:  95%|█████████▍| 104/110 [20:15<00:55,  9.19s/it]Extracting:  95%|█████████▌| 105/110 [20:24<00:46,  9.31s/it]Extracting:  96%|█████████▋| 106/110 [20:37<00:40, 10.15s/it]Extracting:  97%|█████████▋| 107/110 [20:47<00:30, 10.29s/it]Extracting:  98%|█████████▊| 108/110 [20:59<00:21, 10.79s/it]Extracting:  99%|█████████▉| 109/110 [21:11<00:11, 11.23s/it]Extracting: 100%|██████████| 110/110 [21:16<00:00,  9.19s/it]Extracting: 100%|██████████| 110/110 [21:16<00:00, 11.60s/it]
+  Pooled shape: (3501, 512)  Time: 1276s
+
+[4] Computing explicit RNA-binding features...
+  Motif features shape: (3501, 8)  Time: 9.9s
+
+[5] Combining features...
+  Combined dim: 520 (512 pool + 8 motif)
+
+============================================================
+ RandomForest
+============================================================
+  Training time: 1.7s
+  Train | Acc:0.9980 F1:0.9979 AUC:1.0000 AUPR:1.0000
+  Val   | Acc:0.6920 F1:0.6680 AUC:0.7561 AUPR:0.7575
+  Test  | Acc:0.7452 F1:0.7352 AUC:0.8161 AUPR:0.8231
+
+  Test Confusion Matrix:
+  [[ 206   59]
+   [  75  186]]
+              precision    recall  f1-score   support
+
+           0     0.7331    0.7774    0.7546       265
+           1     0.7592    0.7126    0.7352       261
+
+    accuracy                         0.7452       526
+   macro avg     0.7461    0.7450    0.7449       526
+weighted avg     0.7460    0.7452    0.7450       526
+
+
+============================================================
+ XGBoost
+============================================================
+  Training time: 14.9s
+  Train | Acc:1.0000 F1:1.0000 AUC:1.0000 AUPR:1.0000
+  Val   | Acc:0.7091 F1:0.6922 AUC:0.7868 AUPR:0.7829
+  Test  | Acc:0.7586 F1:0.7544 AUC:0.8278 AUPR:0.8300
+
+  Test Confusion Matrix:
+  [[ 204   61]
+   [  66  195]]
+              precision    recall  f1-score   support
+
+           0     0.7556    0.7698    0.7626       265
+           1     0.7617    0.7471    0.7544       261
+
+    accuracy                         0.7586       526
+   macro avg     0.7586    0.7585    0.7585       526
+weighted avg     0.7586    0.7586    0.7585       526
+
+
+============================================================
+ Summary
+============================================================
+  Model                Acc       F1      AUC     AUPR
+  RandomForest      0.7452   0.7352   0.8161   0.8231
+  XGBoost           0.7586   0.7544   0.8278   0.8300
+  Done!

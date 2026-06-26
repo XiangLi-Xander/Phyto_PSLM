@@ -6,21 +6,12 @@ __pycache__/
 dist/
 build/
 
-# Model / data files (large, not tracked)
-*.pth
-*.pt
-*.npz
+# ESM2 model (2.5 GB, too large for GitHub)
 esm2/
 
-# Outputs (generated at runtime)
-outputs/models/
-outputs/logs/
-outputs/predictions/
-outputs/figures/
-outputs/benchmarks/
-outputs/ablation/
-outputs/compare/
-outputs/rna_umap/
+# Files > 100 MB (exceeds GitHub file size limit)
+outputs/benchmarks/esm_iupred_features.npz
+outputs/benchmarks/llps_rf_handcrafted.pkl
 
 # IDE
 .vscode/

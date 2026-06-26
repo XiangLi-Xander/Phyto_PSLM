@@ -1,0 +1,97 @@
+============================================================
+Model Descriptions — RNA-Dependent LLPS Prediction
+============================================================
+
+All five models perform binary classification: predicting whether a protein's
+liquid-liquid phase separation (LLPS) is RNA-dependent (label=1) or
+RNA-independent (label=0). They are trained on the same train/val/test split
+(70/15/15, stratified).
+
+The key distinction is the feature set: "orig" models use traditional
+handcrafted sequence features, while "new" models use ESM2 pre-trained
+protein language model embeddings plus IUPred3 disorder scores.
+
+------------------------------------------------------------
+1. RF_orig — Random Forest (Original Features)
+------------------------------------------------------------
+Algorithm:       Random Forest (500 trees, max_depth=30, class_weight=balanced)
+Feature type:    Traditional handcrafted features (~1402 dimensions)
+Features:        AAC(20) + DPC(400) + Grouped TPC(512) + CTD(56)
+                 + CKSAAP(400) + PhysChem(14)
+ESM2:            No
+IUPred3:         No
+Description:     Classical machine learning model using handcrafted sequence
+                 features computed entirely from amino acid sequences. Fast
+                 to compute and requires no GPU or pre-trained models, but
+                 captures only shallow sequence patterns.
+
+------------------------------------------------------------
+2. XGB_orig — XGBoost (Original Features)
+------------------------------------------------------------
+Algorithm:       XGBoost (500 trees, max_depth=6, lr=0.05, scale_pos_weight)
+Feature type:    Traditional handcrafted features (~1402 dimensions)
+Features:        Same as RF_orig (AAC, DPC, TPC, CTD, CKSAAP, PhysChem)
+ESM2:            No
+IUPred3:         No
+Description:     Gradient boosting model using the same traditional handcrafted
+                 features as RF_orig. XGBoost generally handles feature
+                 interactions better than Random Forest.
+
+------------------------------------------------------------
+3. RF_new — Random Forest (New Features: ESM2 + IUPred3)
+------------------------------------------------------------
+Algorithm:       Random Forest (500 trees, max_depth=30, class_weight=balanced)
+Feature type:    ESM2 embeddings + IUPred3 statistics (~1289 dimensions)
+Features:        ESM2 mean-pooled per-residue embeddings (1280d)
+                 + IUPred3 statistics (9d): mean, std, min, max, median,
+                   Q25, Q75, fraction_disordered, sequence_length
+ESM2:            Yes — facebook/esm2_t33_650M_UR50D, mean-pooled across residues
+IUPred3:         Yes — per-sequence summary statistics (not per-residue)
+Description:     Random Forest using evolutionary embeddings from the ESM2
+                 protein language model (650M params) combined with disorder
+                 predictions. ESM2 captures rich evolutionary and biophysical
+                 context. However, positional information is lost due to mean
+                 pooling across residues.
+
+------------------------------------------------------------
+4. XGB_new — XGBoost (New Features: ESM2 + IUPred3)
+------------------------------------------------------------
+Algorithm:       XGBoost (500 trees, max_depth=6, lr=0.05, scale_pos_weight)
+Feature type:    ESM2 embeddings + IUPred3 statistics (~1289 dimensions)
+Features:        Same as RF_new (ESM2 mean-pooled + IUPred3 stats)
+ESM2:            Yes — mean-pooled across residues
+IUPred3:         Yes — per-sequence summary statistics
+Description:     Gradient boosting model using the same ESM2+IUPred3 features
+                 as RF_new. Achieves the best overall performance among all
+                 five models on the RNA-dependency test set.
+
+------------------------------------------------------------
+5. DL_RNA_dep — Deep Learning (Per-Residue ESM2 + IUPred3)
+------------------------------------------------------------
+Algorithm:       Transformer-based deep neural network
+Architecture:    ESM2 per-residue embeddings (1280d) + IUPred3 per-residue
+                 scores (1d) → asymmetric 2-layer MLPs → element-wise addition
+                 + learned positional encodings → 6-layer Transformer encoder
+                 (Pre-LN, 8 heads, d=512) → Multi-query cross-attention pooling
+                 (4 learnable queries) → LN + Linear + GELU → binary logit
+Training:        2000 steps, AdamW, LR=2e-5, batch_size=32,
+                 early stopping on validation F1
+ESM2:            Yes — per-residue embeddings (not pooled)
+IUPred3:         Yes — per-residue disorder scores
+Description:     The most expressive model. Unlike the ML models which pool
+                 features into fixed-length vectors, this model processes
+                 per-residue features end-to-end, preserving positional
+                 information. The Transformer encoder learns residue-level
+                 interactions. Uses the same architecture as the main
+                 LLPS prediction model (ResidueLLPSClassifier).
+
+============================================================
+Performance Summary (RNA-Dependency Test Set)
+============================================================
+Model         | Accuracy | F1      | AUC
+--------------|----------|---------|------
+RF_orig       | 0.731    | 0.703   | 0.800
+XGB_orig      | 0.725    | 0.710   | 0.795
+RF_new        | 0.742    | 0.722   | 0.800
+XGB_new       | 0.750    | 0.737   | 0.810
+DL_RNA_dep    | 0.587    | 0.667   | ---

@@ -1,0 +1,2 @@
+Step	Phase	Loss	Acc	Precision	Recall	F1	AUC	AUPR
+final	test	0	0.712928	0.706767	0.720307	0.713472	0.773137	0.762660

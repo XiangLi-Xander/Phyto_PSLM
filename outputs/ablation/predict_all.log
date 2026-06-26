@@ -1,0 +1,19 @@
+
+============================================================
+Predicting: 01_no_esm2
+============================================================
+  OK (exit 0) — log: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/ablation/outputs/predict_no_esm2.log
+  ---
+
+============================================================
+Predicting: 02_no_iupred
+============================================================
+  OK (exit 0) — log: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/ablation/outputs/predict_no_iupred.log
+  ---
+
+============================================================
+Predicting: 03_onehot_esm
+============================================================
+  OK (exit 0) — log: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/ablation/outputs/predict_onehot.log
+
+Done! Check /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/ablation/outputs/ for xlsx files.

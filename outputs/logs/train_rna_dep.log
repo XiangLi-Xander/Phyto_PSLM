@@ -1,0 +1,60 @@
+============================================================
+RNA Dependency Classifier Training
+Device: cuda:0 | Steps: 2000 | Eval: 50
+============================================================
+2026-06-09 09:45:49.800386: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some weights of EsmModel were not initialized from the model checkpoint at /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/esm2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Train: 2449 (pos=1213, neg=1236) | Val: 526 | Test: 526
+Model params: 23,944,577
+Log: /home/xiaojian/LLPS_model_project/PhytoRNP_PSLM/outputs/logs/train_rna_dep_20260609_094556.txt
+  Step 25...
+  Step 50...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:12<03:13, 12.09s/it]Evaluating:  12%|█▏        | 2/17 [00:24<03:02, 12.14s/it]Evaluating:  18%|█▊        | 3/17 [00:36<02:48, 12.04s/it]Evaluating:  24%|██▎       | 4/17 [00:48<02:37, 12.10s/it]Evaluating:  29%|██▉       | 5/17 [01:00<02:25, 12.11s/it]Evaluating:  35%|███▌      | 6/17 [01:11<02:08, 11.72s/it]Evaluating:  41%|████      | 7/17 [01:22<01:55, 11.57s/it]Evaluating:  47%|████▋     | 8/17 [01:34<01:45, 11.75s/it]Evaluating:  53%|█████▎    | 9/17 [01:47<01:35, 11.89s/it]Evaluating:  59%|█████▉    | 10/17 [01:59<01:24, 12.01s/it]Evaluating:  65%|██████▍   | 11/17 [02:10<01:11, 11.87s/it]Evaluating:  71%|███████   | 12/17 [02:22<00:59, 11.86s/it]Evaluating:  76%|███████▋  | 13/17 [02:30<00:42, 10.53s/it]Evaluating:  82%|████████▏ | 14/17 [02:42<00:33, 11.03s/it]Evaluating:  88%|████████▊ | 15/17 [02:54<00:22, 11.32s/it]Evaluating:  94%|█████████▍| 16/17 [03:04<00:10, 10.85s/it]Evaluating: 100%|██████████| 17/17 [03:09<00:00,  9.08s/it]                                                           
+Step 50/2000 | LR: 0.000020
+Train -> Loss: 0.7890 | Acc: 0.5437 | F1: 0.5350 | AUC: 0.5595
+Val   -> Loss: 0.6537 | Acc: 0.6122 | F1: 0.5487 | AUC: 0.6631 | AUPR: 0.6348
+Best model saved (Val F1: 0.5487)
+  Step 75...
+  Step 100...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:12<03:15, 12.23s/it]Evaluating:  12%|█▏        | 2/17 [00:24<03:02, 12.14s/it]Evaluating:  18%|█▊        | 3/17 [00:35<02:46, 11.88s/it]Evaluating:  24%|██▎       | 4/17 [00:48<02:35, 11.98s/it]Evaluating:  29%|██▉       | 5/17 [01:00<02:24, 12.04s/it]Evaluating:  35%|███▌      | 6/17 [01:11<02:08, 11.69s/it]Evaluating:  41%|████      | 7/17 [01:22<01:56, 11.67s/it]Evaluating:  47%|████▋     | 8/17 [01:35<01:47, 11.90s/it]Evaluating:  53%|█████▎    | 9/17 [01:47<01:36, 12.01s/it]Evaluating:  59%|█████▉    | 10/17 [01:59<01:24, 12.07s/it]Evaluating:  65%|██████▍   | 11/17 [02:11<01:11, 11.91s/it]Evaluating:  71%|███████   | 12/17 [02:23<00:59, 12.00s/it]Evaluating:  76%|███████▋  | 13/17 [02:30<00:42, 10.63s/it]Evaluating:  82%|████████▏ | 14/17 [02:42<00:33, 11.05s/it]Evaluating:  88%|████████▊ | 15/17 [02:53<00:21, 10.86s/it]Evaluating:  94%|█████████▍| 16/17 [02:57<00:08,  8.99s/it]Evaluating: 100%|██████████| 17/17 [03:00<00:00,  6.91s/it]                                                           
+Step 100/2000 | LR: 0.000020
+Train -> Loss: 0.6317 | Acc: 0.6555 | F1: 0.6398 | AUC: 0.7031
+Val   -> Loss: 0.6602 | Acc: 0.6445 | F1: 0.6063 | AUC: 0.6806 | AUPR: 0.6408
+Best model saved (Val F1: 0.6063)
+  Step 125...
+  Step 150...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:12<03:12, 12.05s/it]Evaluating:  12%|█▏        | 2/17 [00:23<02:58, 11.93s/it]Evaluating:  18%|█▊        | 3/17 [00:35<02:47, 11.96s/it]Evaluating:  24%|██▎       | 4/17 [00:47<02:35, 11.98s/it]Evaluating:  29%|██▉       | 5/17 [01:00<02:24, 12.06s/it]Evaluating:  35%|███▌      | 6/17 [01:10<02:07, 11.62s/it]Evaluating:  41%|████      | 7/17 [01:21<01:53, 11.34s/it]Evaluating:  47%|████▋     | 8/17 [01:33<01:44, 11.57s/it]Evaluating:  53%|█████▎    | 9/17 [01:45<01:33, 11.64s/it]Evaluating:  59%|█████▉    | 10/17 [01:57<01:22, 11.81s/it]Evaluating:  65%|██████▍   | 11/17 [02:08<01:09, 11.62s/it]Evaluating:  71%|███████   | 12/17 [02:21<00:58, 11.79s/it]Evaluating:  76%|███████▋  | 13/17 [02:28<00:42, 10.58s/it]Evaluating:  82%|████████▏ | 14/17 [02:41<00:33, 11.18s/it]Evaluating:  88%|████████▊ | 15/17 [02:53<00:22, 11.43s/it]Evaluating:  94%|█████████▍| 16/17 [03:03<00:10, 10.96s/it]Evaluating: 100%|██████████| 17/17 [03:08<00:00,  9.20s/it]                                                           
+Step 150/2000 | LR: 0.000020
+Train -> Loss: 0.6192 | Acc: 0.6619 | F1: 0.6642 | AUC: 0.7256
+Val   -> Loss: 0.6452 | Acc: 0.6445 | F1: 0.6207 | AUC: 0.6825 | AUPR: 0.6355
+Best model saved (Val F1: 0.6207)
+  Step 175...
+  Step 200...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:11<03:06, 11.63s/it]Evaluating:  12%|█▏        | 2/17 [00:23<02:55, 11.71s/it]Evaluating:  18%|█▊        | 3/17 [00:34<02:41, 11.54s/it]Evaluating:  24%|██▎       | 4/17 [00:46<02:30, 11.54s/it]Evaluating:  29%|██▉       | 5/17 [00:57<02:18, 11.56s/it]Evaluating:  35%|███▌      | 6/17 [01:08<02:03, 11.25s/it]Evaluating:  41%|████      | 7/17 [01:19<01:51, 11.10s/it]Evaluating:  47%|████▋     | 8/17 [01:30<01:40, 11.19s/it]Evaluating:  53%|█████▎    | 9/17 [01:42<01:30, 11.29s/it]Evaluating:  59%|█████▉    | 10/17 [01:53<01:19, 11.39s/it]Evaluating:  65%|██████▍   | 11/17 [02:04<01:07, 11.27s/it]Evaluating:  71%|███████   | 12/17 [02:16<00:56, 11.33s/it]Evaluating:  76%|███████▋  | 13/17 [02:23<00:40, 10.19s/it]Evaluating:  82%|████████▏ | 14/17 [02:35<00:31, 10.61s/it]Evaluating:  88%|████████▊ | 15/17 [02:47<00:21, 10.95s/it]Evaluating:  94%|█████████▍| 16/17 [02:56<00:10, 10.48s/it]Evaluating: 100%|██████████| 17/17 [03:01<00:00,  8.77s/it]                                                           
+Step 200/2000 | LR: 0.000020
+Train -> Loss: 0.5883 | Acc: 0.6826 | F1: 0.6640 | AUC: 0.7539
+Val   -> Loss: 0.7119 | Acc: 0.6008 | F1: 0.6739 | AUC: 0.6949 | AUPR: 0.6521
+Best model saved (Val F1: 0.6739)
+  Step 225...
+  Step 250...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:11<03:04, 11.50s/it]Evaluating:  12%|█▏        | 2/17 [00:22<02:52, 11.49s/it]Evaluating:  18%|█▊        | 3/17 [00:34<02:41, 11.54s/it]Evaluating:  24%|██▎       | 4/17 [00:46<02:30, 11.59s/it]Evaluating:  29%|██▉       | 5/17 [00:57<02:19, 11.65s/it]Evaluating:  35%|███▌      | 6/17 [01:08<02:04, 11.33s/it]Evaluating:  41%|████      | 7/17 [01:19<01:51, 11.13s/it]Evaluating:  47%|████▋     | 8/17 [01:30<01:41, 11.27s/it]Evaluating:  53%|█████▎    | 9/17 [01:37<01:17,  9.64s/it]Evaluating:  59%|█████▉    | 10/17 [01:42<00:58,  8.39s/it]Evaluating:  65%|██████▍   | 11/17 [01:53<00:55,  9.19s/it]Evaluating:  71%|███████   | 12/17 [02:05<00:49,  9.91s/it]Evaluating:  76%|███████▋  | 13/17 [02:12<00:36,  9.24s/it]Evaluating:  82%|████████▏ | 14/17 [02:24<00:30, 10.03s/it]Evaluating:  88%|████████▊ | 15/17 [02:36<00:21, 10.53s/it]Evaluating:  94%|█████████▍| 16/17 [02:45<00:10, 10.19s/it]Evaluating: 100%|██████████| 17/17 [02:50<00:00,  8.58s/it]                                                           
+Step 250/2000 | LR: 0.000020
+Train -> Loss: 0.5819 | Acc: 0.6864 | F1: 0.6884 | AUC: 0.7623
+Val   -> Loss: 0.6824 | Acc: 0.6635 | F1: 0.6424 | AUC: 0.6924 | AUPR: 0.6450
+No F1 improvement (1/5)
+  Step 275...
+  Step 300...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:11<03:09, 11.83s/it]Evaluating:  12%|█▏        | 2/17 [00:23<02:55, 11.70s/it]Evaluating:  18%|█▊        | 3/17 [00:35<02:43, 11.71s/it]Evaluating:  24%|██▎       | 4/17 [00:46<02:32, 11.70s/it]Evaluating:  29%|██▉       | 5/17 [00:58<02:21, 11.82s/it]Evaluating:  35%|███▌      | 6/17 [01:09<02:06, 11.51s/it]Evaluating:  41%|████      | 7/17 [01:20<01:53, 11.35s/it]Evaluating:  47%|████▋     | 8/17 [01:32<01:42, 11.40s/it]Evaluating:  53%|█████▎    | 9/17 [01:43<01:30, 11.34s/it]Evaluating:  59%|█████▉    | 10/17 [01:54<01:19, 11.38s/it]Evaluating:  65%|██████▍   | 11/17 [02:06<01:08, 11.37s/it]Evaluating:  71%|███████   | 12/17 [02:18<00:57, 11.46s/it]Evaluating:  76%|███████▋  | 13/17 [02:25<00:41, 10.31s/it]Evaluating:  82%|████████▏ | 14/17 [02:37<00:32, 10.81s/it]Evaluating:  88%|████████▊ | 15/17 [02:49<00:22, 11.03s/it]Evaluating:  94%|█████████▍| 16/17 [02:58<00:10, 10.47s/it]Evaluating: 100%|██████████| 17/17 [03:03<00:00,  8.78s/it]                                                           
+Step 300/2000 | LR: 0.000020
+Train -> Loss: 0.5958 | Acc: 0.6850 | F1: 0.6702 | AUC: 0.7538
+Val   -> Loss: 0.6493 | Acc: 0.6578 | F1: 0.6000 | AUC: 0.7142 | AUPR: 0.6823
+No F1 improvement (2/5)
+  Step 325...
+  Step 350...
+Evaluating:   0%|          | 0/17 [00:00<?, ?it/s]Evaluating:   6%|▌         | 1/17 [00:12<03:12, 12.03s/it]Evaluating:  12%|█▏        | 2/17 [00:23<02:56, 11.79s/it]Evaluating:  18%|█▊        | 3/17 [00:35<02:46, 11.86s/it]Evaluating:  24%|██▎       | 4/17 [00:47<02:33, 11.82s/it]Evaluating:  29%|██▉       | 5/17 [00:59<02:21, 11.80s/it]Evaluating:  35%|███▌      | 6/17 [01:09<02:06, 11.46s/it]Evaluating:  41%|████      | 7/17 [01:20<01:52, 11.26s/it]Evaluating:  47%|████▋     | 8/17 [01:32<01:41, 11.32s/it]Evaluating:  53%|█████▎    | 9/17 [01:43<01:29, 11.25s/it]Evaluating:  59%|█████▉    | 10/17 [01:55<01:19, 11.42s/it]Evaluating:  65%|██████▍   | 11/17 [02:06<01:08, 11.37s/it]Evaluating:  71%|███████   | 12/17 [02:18<00:57, 11.47s/it]Evaluating:  76%|███████▋  | 13/17 [02:25<00:41, 10.34s/it]Evaluating:  82%|████████▏ | 14/17 [02:37<00:32, 10.82s/it]Evaluating:  88%|████████▊ | 15/17 [02:49<00:22, 11.07s/it]Evaluating:  94%|█████████▍| 16/17 [02:58<00:10, 10.61s/it]Evaluating: 100%|██████████| 17/17 [03:03<00:00,  8.87s/it]                                                           
+Step 350/2000 | LR: 0.000020
+Train -> Loss: 0.5932 | Acc: 0.6915 | F1: 0.6785 | AUC: 0.7609
+Val   -> Loss: 0.6377 | Acc: 0.6483 | F1: 0.5934 | AUC: 0.7182 | AUPR: 0.6842
+No F1 improvement (3/5)
